@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Open downloaded PDF",
+  "description": "ダウンロードしたPDFを自動で新しいタブに表示します。",
+  "version": "1.0.0",
+  "permissions": [
+    "downloads",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
