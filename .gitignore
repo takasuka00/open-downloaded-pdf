@@ -1,3 +1,6 @@
+#jetbrains IDE data
+.idea
+
 # Logs
 logs
 *.log
