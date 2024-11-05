@@ -11,7 +11,7 @@ const {createFunc, changeFunc} = (() => {
     let preDelta = null;
     /**  @param {DownloadDelta} delta */
     const changeFunc = (delta) => {
-        if (!downloadItem.finalUrl.endsWith(".pdf") //ダウンロード元がpdfを表示しているページのダウンロードボタンではなく
+        if (!downloadItem.finalUrl.includes(".pdf") //ダウンロード元がpdfを表示しているページのダウンロードボタンではなく
             && delta.id === downloadItem.id //ダウンロードIDが同じで
             && preDelta && preDelta.filename && preDelta.filename.current.endsWith(".pdf") //pdfをダウンロードしていた場合
             && delta.state && delta.state.current === "complete" //ダウンロード完了時に
